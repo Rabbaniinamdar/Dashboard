@@ -1,0 +1,167 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.recent-orders-container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    flex: 1;
+    border-radius: 1rem;
+}
+
+.recent-orders-heading {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.product-details :first-child {
+    font-size: 19px;
+    font-weight: bolder;
+    color: #000000;
+}
+.product-details:last-child {
+    color: #55555596;
+    font-weight: bolder;
+}
+.recent-orders-table {
+    width: 100%;
+}
+.product-info {
+    display: flex;
+    align-items: center;
+    line-height: 1.5rem;
+}
+
+.recent-orders-table th {
+    text-align: left;
+    padding: 10px 40px;
+    border: none;
+    color: #555555a2;
+}
+
+.recent-orders-table td {
+    text-align: left;
+    padding: 10px 40px;
+    border: none;
+}
+
+.recent-orders-table td img {
+    display: inline-block;
+    margin-right: 15px;
+    width: 90px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+/* Apply CSS to the last three columns to move them to the end */
+.recent-orders-table td:nth-last-child(1),
+.recent-orders-table td:nth-last-child(2),
+.recent-orders-table td:nth-last-child(3) {
+    position: relative;
+    left: 20rem;
+}
+.recent-orders-table th:nth-last-child(1),
+.recent-orders-table th:nth-last-child(2),
+.recent-orders-table th:nth-last-child(3) {
+    position: relative;
+    left: 20rem;
+}
+.recent-orders-table td:nth-last-child(1),
+.recent-orders-table td:nth-last-child(3) {
+    font-size: 17px;
+    color: #555;
+}
+.recent-orders-table td:nth-last-child(2) {
+    font-size: 17px;
+}
+
+.recent-orders-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.recent-orders-heading h2 {
+    margin: 0;
+    font-size: 25px;
+    color: black;
+}
+
+.search-product {
+    display: flex;
+    align-items:center;
+    position: relative;
+    left: 25rem;
+}
+
+
+.search-prodicon {
+    font-size: 40px;
+    color: #ccc;
+}
+
+.search-prodinput {
+    font-size: 14px;
+    outline: none;
+    border: none;
+    flex: 1;
+    padding-left: 0.5rem;
+}
+
+.select-days select {
+    padding: 5px;
+    margin: 0 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #555555a2;
+}
+
+.select-days select:hover,
+.select-days select:focus {
+    outline: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .search-product {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  
+    .search-product-icon {
+      font-size: 24px;
+      margin-right: 0.5rem;
+    }
+  
+    .search-product-input {
+      font-size: 14px;
+      width: 100%;
+    }
+  
+    .select-days {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .recent-orders-heading h2 {
+      font-size: 20px;
+    }
+  
+    .recent-orders-heading {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .product-details p {
+      font-size: 14px;
+    }
+  }
+  

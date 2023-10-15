@@ -1,32 +1,24 @@
-import React from 'react'
-import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts'
+import React from 'react';
+import './CSS/BuyerProfilePieChart.css';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const data = [
-	{ name: 'Male', value: 540 },
-	{ name: 'Female', value: 620 },
-	{ name: 'Other', value: 210 }
-]
+	{ name: 'Male', value: 400 },
+	{ name: 'Female', value: 920 },
+	{ name: 'Other', value: 890 }
+];
 
-const RADIAN = Math.PI / 180
-const COLORS = ['#00C49F', '#FFBB28', '#FF8042']
+const COLORS = ['rgba(255, 0, 106, 0.932)', 'rgba(169, 184, 255, 0.268)', 'rgba(106, 0, 255, 0.91)'];
 
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
-	const radius = innerRadius + (outerRadius - innerRadius) * 0.5
-	const x = cx + radius * Math.cos(-midAngle * RADIAN)
-	const y = cy + radius * Math.sin(-midAngle * RADIAN)
-
-	return (
-		<text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-			{`${(percent * 100).toFixed(0)}%`}
-		</text>
-	)
-}
 
 export default function BuyerProfilePieChart() {
+	const centerX = 185;
+	const centerY = 110;
+
 	return (
-		<div className="w-[20rem] h-[22rem] bg-white p-4 rounded-sm border border-gray-200 flex flex-col">
-			<strong className="text-gray-700 font-medium">Buyer Profile</strong>
-			<div className="mt-3 w-full flex-1 text-xs">
+		<div className="dnchart-container">
+			<p className="title">Customers</p>
+			<p className="sub-title">Customers that buy products</p>			<div className="dnchart-content">
 				<ResponsiveContainer width="100%" height="100%">
 					<PieChart width={400} height={300}>
 						<Pie
@@ -34,8 +26,8 @@ export default function BuyerProfilePieChart() {
 							cx="50%"
 							cy="45%"
 							labelLine={false}
-							label={renderCustomizedLabel}
-							outerRadius={105}
+							outerRadius={110}
+							innerRadius={70}
 							fill="#8884d8"
 							dataKey="value"
 						>
@@ -43,10 +35,18 @@ export default function BuyerProfilePieChart() {
 								<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
 							))}
 						</Pie>
-						<Legend />
+						<text
+							x={centerX}
+							y={centerY}
+							className="dnchart-text"
+						>
+							<tspan fontSize="30" fontWeight="bolder">65%</tspan>
+							<tspan fontSize="17" x={centerX} dy="1.2em">Total New</tspan>
+							<tspan fontSize="17" x={centerX} dy="1em">Customers</tspan>
+						</text>
 					</PieChart>
 				</ResponsiveContainer>
 			</div>
 		</div>
-	)
+	);
 }

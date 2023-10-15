@@ -1,0 +1,126 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sidebar-container {
+    background-color: rgb(0, 0, 73);
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px; /* Define a minimum width to prevent the sidebar from becoming too narrow */
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.sidebar-title {
+    color: #ffffff;
+    font-size: 1.7rem;
+    margin-left: 5px;
+}
+
+.sidebar-links {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.link-inactive {
+    color: #999;
+    margin: 8px;
+    font-size: 17px;
+}
+
+.link-active {
+    background-color: #8383837a;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 17px;
+    width: 85%;
+    font-weight: bolder;
+    margin: 8px;
+}
+
+.link-class {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 300;
+    padding: 0.5rem 0.75rem;
+}
+
+.link-active-bg {
+    background-color: #444;
+}
+.arrow-mark {
+    position: relative;
+    color: #959595;
+    left: 80%;
+}
+.sidebar-footer {
+    gap: 0.125rem;
+    padding-top: 0.5rem;
+}
+
+.logout-link {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    background-color: #8383837a;
+    color: #fff;
+    border-radius: 5px;
+    width: 93%;
+    position: relative;
+    bottom: 30px;
+    margin: 10px;
+}
+
+.logout-link img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logout_info {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: center;
+}
+
+.logout_info .name {
+    font-weight: bolder;
+}
+
+.logout_info .role {
+    color: #959595;
+}
+
+.downarrow-mark {
+    color: #959595;
+    left: 14%;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .sidebar-container {
+        width: 100%; /* Expand to full width on small screens */
+    }
+
+    .sidebar-links {
+        flex-direction: row; /* Display links horizontally on small screens */
+        overflow-x: auto; /* Add horizontal scroll for extra links */
+        gap: 0.25rem;
+        padding: 0.25rem;
+    }
+
+    .sidebar-footer {
+        display: none; /* Hide the footer on small screens */
+    }
+
+    /* Adjust other styles as needed for small screens */
+}

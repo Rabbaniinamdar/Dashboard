@@ -1,0 +1,103 @@
+.container {
+    height: 22rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.bar-heading {
+    margin: 0 15px;
+}
+.barchart {
+    position: relative;
+    border-radius: 10px;
+    top: -5rem;
+}
+.title {
+    color: black;
+    font-weight: bolder;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.sub-title {
+    color: gray;
+    font-weight: bolder;
+    font-size: 16px;
+}
+.select-Quartly {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 3rem;
+    color: gray;
+    font-size: 16px;
+    right: 1rem;
+}
+.select-Quartly select {
+    padding: 5px;
+    /* margin: 0 20px; */
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #555555a2;
+}
+.select-Quartly select:hover,
+.select-Quartly select:focus {
+    outline: none;
+}
+.chart-container {
+    margin-top: 0.75rem;
+    flex: 1;
+    font-size: 0.875rem;
+}
+
+.bar {
+    fill: rgba(169, 184, 255, 0.268);
+    border-radius: 102px;
+}
+.bar:hover {
+    fill: blue;
+}
+
+/* Small screens (e.g., mobile phones) */
+@media (max-width: 600px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .sub-title {
+        font-size: 14px;
+    }
+
+    .select-Quartly {
+        bottom: 0; /* Reset the position */
+    }
+
+    .select-Quartly select {
+        font-size: 14px;
+    }
+}
+
+/* Larger screens (e.g., tablets and desktops) */
+@media (min-width: 601px) {
+    .title {
+        font-size: 25px;
+    }
+
+    .sub-title {
+        font-size: 16px;
+    }
+
+    .select-Quartly select {
+        font-size: 16px;
+    }
+}
+
+/* Wide screens (e.g., large desktops) */
+@media (min-width: 1200px) {
+    .bar-heading {
+        margin: 0 30px;
+    }
+}

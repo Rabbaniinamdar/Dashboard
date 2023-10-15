@@ -1,0 +1,45 @@
+
+.dnchart-container {
+    width: 25rem;
+    height: 22rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 768px) {
+    .dnchart-container {
+      max-width: 100%; /* Allow the container to take the full width on smaller screens */
+    }
+  }
+  
+  .dnchart-title {
+    color: #4a5568;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .dnchart-content {
+    margin-top: 0.75rem;
+    flex: 1;
+    font-size: 0.75rem;
+  }
+  
+  .dnchart-text {
+    text-anchor: middle;
+  }
+  
+  .dnchart-percent {
+    font-size: 1.375rem;
+    font-weight: bold;
+  }
+  
+  .dnchart-label {
+    font-size: 0.875rem;
+  }
+  
+  .dnchart-sublabel {
+    font-size: 0.875rem;
+  }
